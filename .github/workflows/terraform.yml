@@ -30,7 +30,7 @@ jobs:
       - name: Create Terraform Variables File
         run: |
           echo 'service_account_email = "${{ secrets.SERVICE_ACCOUNT_EMAIL }}"' > variables.tfvars
-          echo 'ssh_key_vm = "${{ secrets.SSH_KEY }}"' >> variables.tfvars
+          echo 'gcp_project_id = "${{ secrets.GCP_PROJECT_ID_SP }}"' >> variables.tfvars
           
       - name: Terraform Init
         run: terraform init 
